@@ -154,6 +154,12 @@ class PHPExcel_Worksheet_Protection
      */
     private $password                = '';
 
+
+    private $hashValue               = '';
+    private $saltValue               = '';
+    private $algorithmName           = '';
+    private $spinCount               = '';
+
     /**
      * Create a new PHPExcel_Worksheet_Protection
      */
@@ -578,4 +584,44 @@ class PHPExcel_Worksheet_Protection
             }
         }
     }
+
+   function getHashValue()
+   {
+        return $this->hashValue;
+   }
+
+   function setHashValue($val = '')
+   {
+        $this->hashValue = $val;
+   }
+
+   function getSaltValue()
+   {
+         return $this->saltValue;
+   }
+
+   function setSaltValue($val = '')
+   {
+        $this->saltValue = $val;
+   }
+
+   function getAlgorithmName()
+   {
+        return $this->algorithmName;
+   }
+
+   function setAlgorithmName($val = '')
+   {
+        $this->algorithmName = $val;
+   }
+
+   function getSpinCount()
+   {
+        return $this->spinCount;
+   }
+
+   function setSpinCount($val = '')
+   {
+        $this->spinCount = $val;
+   }
 }
